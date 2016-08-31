@@ -60,15 +60,13 @@
     
     
     _tableView = [UITableView new];
+    _tableView.frame=self.view.bounds;
     _tableView.tableFooterView = [UIView new];
     _tableView.dataSource = self;
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
     
-
-    [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
-    }];
+    
     
     for (int j = 0 ; j<10; j++)
     {
